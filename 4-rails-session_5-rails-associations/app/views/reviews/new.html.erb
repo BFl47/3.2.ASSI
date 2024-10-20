@@ -1,0 +1,8 @@
+<h1> New Review for <%= @movie.title %> </h1>
+<%= form_tag movie_reviews_path(@movie), class: 'form' do %>
+	<label class="col-form-label"> How many potatoes: </label>
+	<%= select_tag 'review[potatoes]', options_for_select(1..5) %>
+	<label class="col-form-label"> Comments: </label>
+	<%= text_area_tag('review[comments]', 'Amazing movie!', size: '50x5') %>
+	<%= submit_tag 'Create Review' %>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Moviegoers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @moviegoers.each do |moviegoer| %>
+      <tr>
+        <td><%= moviegoer.uid %></td>
+        <td><%= moviegoer.name %></td>
+        <td><%= link_to 'Show', moviegoer %></td>
+        <td><%= link_to 'Edit', edit_moviegoer_path(moviegoer) %></td>
+        <td><%= button_to 'Destroy', moviegoer, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy-button' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Moviegoer', new_moviegoer_path %>
+
+<script>
+  document.querySelectorAll('.destroy-button').forEach(button => {
+    button.addEventListener('click', (event) => {
+      if (!confirm(event.target.dataset.confirm)) {
+        event.preventDefault(); // Interrompi l'invio del modulo se l'utente annulla la conferma
+      }
+    });
+  });
+</script>

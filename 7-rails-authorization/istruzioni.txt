@@ -1,0 +1,1 @@
+rails destroy canard:ability gatto

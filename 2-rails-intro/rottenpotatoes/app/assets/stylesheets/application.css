@@ -1,0 +1,29 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /* Stili per il pulsante Destroy */
+.btn-destroy {
+    color: #0e5eb4; /* colore del link */
+    text-decoration: underline; /* sottolinea il testo come un link */
+    background-color: transparent; /* rende lo sfondo trasparente */
+    border: none; /* rimuove il bordo */
+    cursor: pointer; /* cursore quando si passa sopra */
+  }
+  
+.btn-destroy:hover {
+color: #0056b3; /* cambio colore al passaggio del mouse */
+}
+  
+  
